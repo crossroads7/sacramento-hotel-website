@@ -147,46 +147,53 @@ nav a:hover::after {
     }
 }
         }
-/* Gallery Grid */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    margin-top: 40px;
-}
+/* ===== MODERN SLIDER ===== */
 
-.gallery-item {
+.slider {
     position: relative;
+    max-width: 1000px;
+    margin: 40px auto;
     overflow: hidden;
     border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    transition: transform 0.3s ease;
 }
 
-.gallery-item:hover {
-    transform: translateY(-8px);
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
 }
 
-.gallery-item img {
+.slides img {
     width: 100%;
-    height: 260px;
+    flex-shrink: 0;
+    height: 450px;
     object-fit: cover;
-    transition: transform 0.4s ease;
 }
 
-.gallery-item:hover img {
-    transform: scale(1.08);
-}
-
-.gallery-item .caption {
+.prev, .next {
     position: absolute;
-    bottom: 0;
-    width: 100%;
-    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.6);
     color: white;
-    padding: 15px;
-    font-size: 16px;
-    font-weight: 500;
+    border: none;
+    padding: 15px 20px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+    z-index: 10;
+    transition: 0.3s;
+}
+
+.prev:hover, .next:hover {
+    background: rgba(0,0,0,0.9);
+}
+
+.prev {
+    left: 15px;
+}
+
+.next {
+    right: 15px;
 }
         /* ===== NEW FOOTER ===== */
 .footer {
@@ -290,42 +297,21 @@ nav a:hover::after {
 <section id="gallery">
     <h2>Photo Gallery</h2>
 
-    <div class="gallery">
+    <div class="slider">
 
-        <div class="gallery-item">
+        <button class="prev">&#10094;</button>
+
+        <div class="slides">
             <img src="images/king.jpg" alt="King Room">
-            <div class="caption">King Room</div>
-        </div>
-
-        <div class="gallery-item">
             <img src="images/double.jpg" alt="Double Room">
-            <div class="caption">Double Room</div>
-        </div>
-
-        <div class="gallery-item">
             <img src="images/front.jpg" alt="Front View">
-            <div class="caption">Front View</div>
-        </div>
-
-        <div class="gallery-item">
-            <img src="images/2Beds.jpg" alt="Two Beds Room">
-            <div class="caption">Two Beds Room</div>
-        </div>
-
-        <div class="gallery-item">
+            <img src="images/2Beds.jpg" alt="Two Beds">
             <img src="images/bathroom.jpg" alt="Bathroom">
-            <div class="caption">Bathroom</div>
-        </div>
-
-        <div class="gallery-item">
             <img src="images/coffeemachine.jpg" alt="Amenities">
-            <div class="caption">Amenities</div>
+            <img src="images/deluxe room.jpg" alt="Deluxe Room">
         </div>
 
-        <div class="gallery-item">
-            <img src="images/deluxe room.jpg" alt="Deluxe Room">
-            <div class="caption">Deluxe Room</div>
-        </div>
+        <button class="next">&#10095;</button>
 
     </div>
 </section>
@@ -365,6 +351,33 @@ nav a:hover::after {
         © 2026 Crossroads Inn - Downtown Sacramento | All Rights Reserved
     </div>
 </footer>
+<script>
+const slides = document.querySelector('.slides');
+const images = document.querySelectorAll('.slides img');
+const prev = document.querySelector('.prev');
+const next = document.querySelector('.next');
 
+let index = 0;
+
+function showSlide(i) {
+    if (i < 0) {
+        index = images.length - 1;
+    } else if (i >= images.length) {
+        index = 0;
+    } else {
+        index = i;
+    }
+
+    slides.style.transform = `translateX(${-index * 100}%)`;
+}
+
+next.addEventListener('click', () => {
+    showSlide(index + 1);
+});
+
+prev.addEventListener('click', () => {
+    showSlide(index - 1);
+});
+</script>
 </body>
 </html>
