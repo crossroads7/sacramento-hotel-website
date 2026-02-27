@@ -70,12 +70,7 @@
             background-color: #e67e22;
         }
 
-        footer {
-            background-color: #1f2d3d;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
+        
 
         @media (max-width: 768px) {
             header h1 {
@@ -129,6 +124,51 @@
 .gallery-item:hover .caption {
     opacity: 1;
 }
+        /* ===== NEW FOOTER ===== */
+.footer {
+    background-color: #111;
+    color: #ddd;
+    padding: 50px 20px 20px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-column h3 {
+    color: #00aaff;
+    margin-bottom: 15px;
+}
+
+.footer-column p {
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+.footer-column a {
+    display: block;
+    color: #ddd;
+    text-decoration: none;
+    margin: 8px 0;
+    font-size: 14px;
+}
+
+.footer-column a:hover {
+    color: #f39c12;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    border-top: 1px solid #333;
+    padding-top: 15px;
+    font-size: 14px;
+    color: #aaa;
+}
     </style>
 </head>
 
@@ -178,15 +218,40 @@
     </div>
 </section>
     
-<section id="contact">
-    <h2>Contact Us</h2>
-    <p>Email: info@sacramentocomforthotel.com</p>
-    <p>Phone: (916) 123-4567</p>
-    <p>Sacramento, CA</p>
-</section>
+<footer class="footer">
+    <div class="footer-container">
 
-<footer>
-    <p>© 2026 Crossroads Inn-Downtown Sacramento | Sacramento, CA</p>
+        <!-- Column 1 -->
+        <div class="footer-column">
+            <h3>Crossroads Inn - Sacramento</h3>
+            <p>216 Bannon St, Sacramento, CA 95811, US</p>
+            <p>📞 +1 (916) 123-4567</p>
+            <p>📠 +1 (916) 414-9100</p>
+            <p>🌐 www.crossroadsinnsacramento.com</p>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="rooms.html">Rooms</a>
+            <a href="#gallery">Photo Gallery</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="footer-column">
+            <h3>Hotel Details</h3>
+            <p>Check In: 3:00 PM</p>
+            <p>Check Out: 11:00 AM</p>
+            <p>Sorry, Pets Not Allowed</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 Crossroads Inn - Downtown Sacramento | All Rights Reserved
+    </div>
 </footer>
 
 </body>
