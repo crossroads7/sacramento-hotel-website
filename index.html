@@ -150,49 +150,43 @@ nav a:hover::after {
 /* Gallery Grid */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-    padding: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
 }
 
-/* Each gallery item */
 .gallery-item {
     position: relative;
     overflow: hidden;
-    border-radius: 8px;
-}
-
-/* Images */
-.gallery-item img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
     transition: transform 0.3s ease;
 }
 
-/* Zoom effect on hover */
-.gallery-item:hover img {
-    transform: scale(1.1);
+.gallery-item:hover {
+    transform: translateY(-8px);
 }
 
-/* Caption overlay */
+.gallery-item img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
 .gallery-item .caption {
     position: absolute;
     bottom: 0;
-    left: 0;
     width: 100%;
-    background: rgba(0,0,0,0.6);
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
     color: white;
-    text-align: center;
-    padding: 8px 0;
+    padding: 15px;
     font-size: 16px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-/* Show caption on hover */
-.gallery-item:hover .caption {
-    opacity: 1;
+    font-weight: 500;
 }
         /* ===== NEW FOOTER ===== */
 .footer {
@@ -295,36 +289,44 @@ nav a:hover::after {
 
 <section id="gallery">
     <h2>Photo Gallery</h2>
+
     <div class="gallery">
+
         <div class="gallery-item">
             <img src="images/king.jpg" alt="King Room">
             <div class="caption">King Room</div>
         </div>
+
         <div class="gallery-item">
             <img src="images/double.jpg" alt="Double Room">
             <div class="caption">Double Room</div>
         </div>
+
         <div class="gallery-item">
             <img src="images/front.jpg" alt="Front View">
             <div class="caption">Front View</div>
-            
-            <div class="gallery-item">
-            <img src="images/2Beds.jpg" alt="2Beds">
-            <div class="caption">2Beds</div>
+        </div>
 
-                <div class="gallery-item">
+        <div class="gallery-item">
+            <img src="images/2Beds.jpg" alt="Two Beds Room">
+            <div class="caption">Two Beds Room</div>
+        </div>
+
+        <div class="gallery-item">
             <img src="images/bathroom.jpg" alt="Bathroom">
             <div class="caption">Bathroom</div>
+        </div>
 
-                    <div class="gallery-item">
+        <div class="gallery-item">
             <img src="images/coffeemachine.jpg" alt="Amenities">
             <div class="caption">Amenities</div>
+        </div>
 
-                        <div class="gallery-item">
+        <div class="gallery-item">
             <img src="images/deluxe room.jpg" alt="Deluxe Room">
             <div class="caption">Deluxe Room</div>
-                            
         </div>
+
     </div>
 </section>
     
