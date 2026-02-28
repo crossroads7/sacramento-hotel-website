@@ -15,7 +15,7 @@
         header {
             position: relative; 
             background: url("images/hotel.jpg") no-repeat center center/cover;
-            height: 400px;
+            height: 500px;
             color: white;
             text-align: center;
             display: flex;
@@ -251,6 +251,37 @@ nav a:hover::after {
     height: 140px;
     width: auto;
 }
+        /* ===== HERO HEADER ===== */
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 56px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.tagline {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.location {
+    font-size: 16px;
+    opacity: 0.9;
+    margin-bottom: 25px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
     </style>
 </head>
 
@@ -259,15 +290,29 @@ nav a:hover::after {
 <header>
 
     <div class="logo">
-        <img src="images/logo.jpg" alt="Crossroads Inn Logo">
-    </div>
+    <img src="images/logo.jpg" alt="Crossroads Inn Logo">
+</div>
 
-    <h1>Crossroads Inn - Downtown Sacramento</h1>
-    <p>28 Rooms | Comfort & Luxury in Sacramento</p>
-    <br>
-    <div style="margin-top:20px;">
-    <a class="button" href="https://www.booking.com" target="_blank">Book Now</a>
-    <a class="call-button" href="tel:+19164427777">Call Now</a>
+<div class="hero-content">
+    <h1>Crossroads Inn</h1>
+
+    <p class="tagline">
+        Comfortable & Affordable Stay in Downtown Sacramento
+    </p>
+
+    <p class="location">
+        📍 221 Jibboom Street • Sacramento, California
+    </p>
+
+    <div class="hero-buttons">
+        <a class="button" href="https://www.booking.com" target="_blank">
+            Book Your Stay
+        </a>
+
+        <a class="call-button" href="tel:+19164427777">
+            Call Front Desk
+        </a>
+    </div>
 </div>
 </header>
 
