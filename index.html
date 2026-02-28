@@ -542,6 +542,80 @@ nav a:hover::after {
 .contact-line a:hover{
     color:#f39c12;
 }
+
+        /* ===== Booking Bar (Below Summary) ===== */
+.booking-bar-wrap{
+  max-width: 1100px;
+  margin: 30px auto 60px;
+  padding: 0 16px;
+}
+
+.booking-bar{
+  background: rgba(255,255,255,0.95);
+  border-radius: 16px;
+  padding: 18px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr auto;
+  gap: 14px;
+  align-items: end;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+.booking-bar .field{
+  text-align: left;
+}
+
+.booking-bar label{
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1f2d3d;
+  margin-bottom: 6px;
+}
+
+.booking-bar input,
+.booking-bar select{
+  width: 100%;
+  height: 44px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.18);
+  padding: 0 12px;
+  font-family: inherit;
+  font-size: 15px;
+  background: #fff;
+}
+
+.book-btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  padding: 0 22px;
+  border-radius: 12px;
+  background: #0b3a74;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  transition: 0.25s ease;
+  white-space: nowrap;
+}
+
+.book-btn:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.18);
+}
+
+/* Mobile layout */
+@media (max-width: 768px){
+  .booking-bar{
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .book-btn{
+    width: 100%;
+  }
+}
         
     </style>
 </head>
@@ -599,6 +673,35 @@ nav a:hover::after {
         Conveniently located near Old Sacramento, Golden 1 Center, and major highways,
         our hotel provides easy access for business and leisure travelers.
     </p>
+</section>
+
+    <!-- Booking Bar (Redirect Only) -->
+<section class="booking-bar-wrap">
+  <div class="booking-bar">
+    <div class="field">
+      <label for="checkin">Check In</label>
+      <input type="date" id="checkin">
+    </div>
+
+    <div class="field">
+      <label for="checkout">Check Out</label>
+      <input type="date" id="checkout">
+    </div>
+
+    <div class="field">
+      <label for="roomtype">Room</label>
+      <select id="roomtype">
+        <option value="">Room Type</option>
+        <option>King Room</option>
+        <option>Double Room</option>
+        <option>Deluxe Room</option>
+      </select>
+    </div>
+
+    <a class="book-btn" href="https://www.booking.com" target="_blank" rel="noopener">
+      Book Now
+    </a>
+  </div>
 </section>
 
 <section id="rooms" class="rooms">
