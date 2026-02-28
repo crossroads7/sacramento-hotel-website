@@ -518,6 +518,30 @@ nav a:hover::after {
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 }
+        /* Footer contact alignment */
+
+.contact-line{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin:8px 0;
+    color:#ddd;
+}
+
+.contact-line .icon{
+    width:22px;
+    text-align:center;
+    flex-shrink:0;
+}
+
+.contact-line a{
+    color:#ddd;
+    text-decoration:none;
+}
+
+.contact-line a:hover{
+    color:#f39c12;
+}
         
     </style>
 </head>
@@ -613,14 +637,29 @@ nav a:hover::after {
     <div class="footer-container">
 
         <!-- Column 1 -->
-        <div class="footer-column">
-            <h3>Crossroads Inn - Sacramento</h3>
-            <p>221 Jibboom St, Sacramento, CA 95811, US</p>
-            <p>📞<a href="tel:+19164427777" style="color:#ddd; text-decoration:none;">+1 (916) 442-7777</a></p>
-            <p>📠 +1 (916) 999-4772</p>
-            <p>🌐crossroadsinnsac.us</p>
-        </div>
+    <div class="footer-column">
+    <h3>Crossroads Inn - Sacramento</h3>
 
+    <p class="contact-line">
+        <span class="icon">📍</span>
+        221 Jibboom St, Sacramento, CA 95811, US
+    </p>
+
+    <p class="contact-line">
+        <span class="icon">📞</span>
+        <a href="tel:+19164427777">+1 (916) 442-7777</a>
+    </p>
+
+    <p class="contact-line">
+        <span class="icon">📠</span>
+        +1 (916) 999-4772
+    </p>
+
+    <p class="contact-line">
+        <span class="icon">🌐</span>
+        crossroadsinnsac.us
+    </p>
+</div>
         <!-- Column 2 -->
         <div class="footer-column">
             <h3>Quick Links</h3>
