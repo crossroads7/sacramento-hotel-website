@@ -282,6 +282,25 @@ nav a:hover::after {
     gap: 15px;
     flex-wrap: wrap;
 }
+        .hero-features{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+  margin: 18px 0 28px;
+  position: relative;
+  z-index: 2;
+}
+
+.feature{
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.18);
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-size: 14px;
+  backdrop-filter: blur(6px);
+}
     </style>
 </head>
 
@@ -303,6 +322,11 @@ nav a:hover::after {
     <p class="location">
         📍 221 Jibboom Street • Sacramento, California
     </p>
+    <div class="hero-features">
+  <div class="feature">✅ Free Wi-Fi</div>
+  <div class="feature">✅ Free Parking</div>
+  <div class="feature">✅ 24/7 Front Desk</div>
+</div>
 
     <div class="hero-buttons">
         <a class="button" href="https://www.booking.com" target="_blank">
