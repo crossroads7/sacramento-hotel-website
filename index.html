@@ -135,7 +135,34 @@ nav a:hover::after {
         
 
   @media (max-width: 768px) {
+/* FIX: logo should NOT be absolute on mobile */
+.logo{
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  margin: 0 auto 14px !important;
+  display: flex !important;
+  justify-content: center !important;
+  width: 100%;
+}
 
+.logo img{
+  height: 70px;   /* smaller so it fits */
+  width: auto;
+}
+      header{
+  height: auto !important;
+  padding: 30px 16px 24px !important;
+}
+      .hero-content h1{
+  font-size: 34px;
+  line-height: 1.1;
+}
+
+.tagline{
+  font-size: 16px;
+  line-height: 1.4;
+}
   /* Header height and spacing */
   header {
     height: auto;
