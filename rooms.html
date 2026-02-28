@@ -69,6 +69,39 @@ color:white;
 text-align:center;
 padding:25px;
 }
+    .room-box{
+    background:white;
+    padding:20px;
+    margin:25px auto;
+    border-radius:12px;
+    max-width:700px;
+    box-shadow:0 10px 20px rgba(0,0,0,0.08);
+}
+
+.room-img{
+    width:100%;
+    height:250px;        /* 🔹 change this to control size */
+    object-fit:cover;    /* keeps image nice without stretching */
+    border-radius:10px;
+}
+
+    .button{
+    display:inline-block;
+    margin-top:15px;
+    padding:10px 22px;
+    background:#0b3a74;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.button:hover{
+    background:#092c58;
+    transform:translateY(-2px);
+}
+    
 
 </style>
 </head>
@@ -95,21 +128,21 @@ padding:25px;
 
     <div class="room-box">
         <h2>King Room</h2>
-    <img src="King.jpg" width="100%" style="border-radius:8px;">
+   <img src="kingroom.jpg" class="room-img">
     <p>Regular King-size bed, free WiFi.</p>
     <a class="button" href="https://www.booking.com" target="_blank">Book Now</a>
     </div>
 
     <div class="room-box">
         <h2>Double Room</h2>
-    <img src="images/2Beds.jpg" width="100%" style="border-radius:8px;">
+    <img src="2Beds.jpg" class="room-img">
     <p>Perfect for families or business travelers.</p>
     <a class="button" href="https://www.booking.com" target="_blank">Book Now</a>
     </div>
 
     <div class="room-box">
         <h2>Deluxe Room</h2>
-    <img src="deluxeroom.jpg" width="100%" style="border-radius:8px;">
+    <img src="deluxeroom2.jpg" class="room-img">
     <p>Spacious king-size bed, free WiFi: Perfect for Couple</p>
     <a class="button" href="https://www.booking.com" target="_blank">Book Now</a>
     </div>
