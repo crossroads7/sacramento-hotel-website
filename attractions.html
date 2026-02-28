@@ -1,1 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sacramento Attractions Near Crossroads Inn</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+margin:0;
+font-family:'Poppins',sans-serif;
+background:#f8f9fa;
+}
+
+/* NAV */
+nav{
+background:#1f2d3d;
+padding:15px;
+text-align:center;
+}
+
+nav a{
+color:white;
+margin:20px;
+text-decoration:none;
+font-weight:500;
+}
+
+/* HEADER */
+.header{
+background:url("images/sacramento.jpg") center/cover no-repeat;
+height:300px;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+text-align:center;
+position:relative;
+}
+
+.header::before{
+content:"";
+position:absolute;
+inset:0;
+background:rgba(0,0,0,0.55);
+}
+
+.header h1{
+position:relative;
+z-index:2;
+font-size:42px;
+}
+
+/* SECTION */
+section{
+max-width:1100px;
+margin:auto;
+padding:60px 20px;
+}
+
+/* ATTRACTION CARDS */
+.attractions{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 10px 20px rgba(0,0,0,0.1);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.card-content{
+padding:20px;
+}
+
+.card-content h3{
+margin-top:0;
+}
+
+/* FOOTER */
+footer{
+background:#1f2d3d;
+color:white;
+text-align:center;
+padding:25px;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="rooms.html">Rooms</a>
+<a href="attractions.html">Attractions</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+<div class="header">
+<h1>Sacramento Attractions Near Crossroads Inn</h1>
+</div>
+
+<section>
+
+<div class="attractions">
+
+<div class="card">
+<img src="images/old-sacramento.jpg">
+<div class="card-content">
+<h3>Old Sacramento Waterfront</h3>
+<p>Historic district featuring shopping, dining, museums and riverfront walks just minutes from our hotel.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="images/golden1.jpg">
+<div class="card-content">
+<h3>Golden 1 Center</h3>
+<p>Home of Sacramento Kings games, concerts and major entertainment events.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="images/capitol.jpg">
+<div class="card-content">
+<h3>California State Capitol</h3>
+<p>Visit the beautiful Capitol building and surrounding gardens in downtown Sacramento.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="images/zoo.jpg">
+<div class="card-content">
+<h3>Sacramento Zoo</h3>
+<p>Family-friendly destination featuring animals from around the world.</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 Crossroads Inn Sacramento
+</footer>
+
+</body>
+</html>
