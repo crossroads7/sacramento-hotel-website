@@ -47,16 +47,19 @@ header .button,
             font-size: 20px;
         }
 
-        nav {
-            background-color: #1f2d3d;
-            display: flex;
-justify-content: center;
-align-items: center;
-flex-wrap: wrap;
-gap: 15px;
-            padding: 15px;
-            text-align: center;
-        }
+        nav{
+    background: rgba(31,45,61,0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:12px;
+
+    padding:15px;
+}
 
         nav a {
   color: white;
@@ -492,6 +495,28 @@ nav a:hover::after {
     text-align:center;
     margin:0;
   }
+}
+        .nav-btn{
+    color: white;
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 12px;
+
+    /* Glass Effect */
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    transition: all 0.3s ease;
+}
+
+/* Hover Glow */
+.nav-btn:hover{
+    background: rgba(255,255,255,0.18);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 }
         
     </style>
