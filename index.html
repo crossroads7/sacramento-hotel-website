@@ -27,7 +27,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.55);
+    background: rgba(0, 0, 0, 0.65);
 }
         header h1,
 header p,
@@ -59,11 +59,13 @@ gap: 15px;
         }
 
         nav a {
-            color: white;
-            margin: 20px;
-            text-decoration: none;
-            font-weight: bold;
-        }
+  color: white;
+  margin: 0;              /* IMPORTANT: remove big margin */
+  padding: 10px 12px;     /* spacing instead */
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 10px;
+}
 
         nav a {
     position: relative;
@@ -132,19 +134,90 @@ nav a:hover::after {
         
         
 
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 30px;
-            }
-            header div {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-    .call-button {
-        margin-left: 0; 
-    }
+  @media (max-width: 768px) {
+
+  /* Header height and spacing */
+  header {
+    height: auto;
+    padding: 35px 18px 28px;
+  }
+
+  /* Put logo centered, not absolute */
+  .logo {
+    position: relative;
+    top: auto;
+    left: auto;
+    margin: 0 auto 15px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .logo img {
+    height: 80px;   /* smaller logo */
+    width: auto;
+  }
+
+  /* Hero text sizes */
+  .hero-content h1 {
+    font-size: 34px;
+    line-height: 1.1;
+    margin-bottom: 10px;
+  }
+
+  .tagline {
+    font-size: 16px;
+    line-height: 1.4;
+    padding: 0 8px;
+  }
+
+  .location {
+    font-size: 14px;
+    line-height: 1.4;
+    padding: 0 8px;
+  }
+
+  /* Feature badges */
+  .hero-features {
+    gap: 10px;
+    margin: 16px 0 18px;
+  }
+
+  .feature {
+    font-size: 13px;
+    padding: 9px 12px;
+  }
+
+  /* Stack buttons nicely */
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .hero-buttons .button,
+  .hero-buttons .call-button {
+    width: min(340px, 92vw);
+    text-align: center;
+    padding: 14px 18px;
+  }
+
+  /* Nav spacing tighter on mobile */
+  nav {
+    gap: 8px;
+    padding: 12px;
+  }
+
+  nav a {
+    padding: 9px 10px;
+  }
+
+  /* Make nav buttons fit nicely */
+  nav .button,
+  nav .call-button {
+    padding: 10px 14px;
+    font-size: 14px;
+    margin-left: 0;
+  }
 }
 /* ===== MODERN SLIDER ===== */
 
