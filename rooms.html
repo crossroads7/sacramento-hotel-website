@@ -7,6 +7,30 @@
         body { margin:0; font-family: Poppins; background:#f4f4f4; }
         nav { background:#1f2d3d; padding:15px; text-align:center; }
         nav a { color:white; margin:20px; text-decoration:none; font-weight:bold; }
+        /* HERO HEADER */
+.header {
+    background: url("images/hotel2.jpg") center/cover no-repeat;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+}
+
+.header h1 {
+    position: relative;
+    z-index: 2;
+    font-size: 42px;
+}
         section { padding:50px; text-align:center; }
         .room-box { background:white; margin:20px auto; padding:20px; max-width:500px; border-radius:8px; }
         .button { background:#f39c12; color:white; padding:10px 20px; text-decoration:none; border-radius:5px; }
@@ -26,7 +50,9 @@
 </nav>
 
 <section>
+    <div class="header">
     <h1>Our Rooms</h1>
+</div>
 
     <div class="room-box">
         <h2>King Room</h2>
@@ -37,7 +63,7 @@
 
     <div class="room-box">
         <h2>Double Room</h2>
-    <img src="double.jpg" width="100%" style="border-radius:8px;">
+    <img src="images/2Beds.jpg" width="100%" style="border-radius:8px;">
     <p>Perfect for families or business travelers.</p>
     <a class="button" href="https://www.booking.com" target="_blank">Book Now</a>
     </div>
